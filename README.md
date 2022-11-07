@@ -13,9 +13,9 @@ Designed to use basic BASH commands to be usable on most systems.
 
 ```json2kafka.sh <file.json> [</path/to/kafka/bin>]```
 
-See ```example.json``` for examples.
+Default path to kafka scripts is ```/kafka/bin/```
 
-Default ```/path/to/kafka/bin``` id ```/kafka/bin/```
+See ```example.json``` for examples.
 
 ## Available commands:
 - create topic with defined partitions, replacas and configs;
