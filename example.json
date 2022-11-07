@@ -1,0 +1,79 @@
+{
+  "server":"localhost:9092",
+  "create": [
+    {
+      "name": "topic-1",
+      "partitions": 2,
+      "perlicas": 1,
+      "configs": {
+        "cleanup.policy": "compact",
+        "retention.bytes": 1000000
+      }
+    },
+    {
+      "name": "topic-2",
+      "partitions": 4,
+      "perlicas": 1
+    },
+    {
+      "name": "topic-3",
+      "partitions": 8,
+      "perlicas": 2
+    }
+  ],
+  
+  "edit_config": [
+    {
+      "name": "topic-1",
+      "configs": {
+        "retention.ms": 60000,
+        "retention.bytes": 1000000
+      }
+    },
+    {
+      "name": "topic-2",
+      "configs": {
+        "retention.ms": 60000,
+        "retention.bytes": 1000000
+      }
+    },
+    {
+      "name": "topic-3",
+      "configs": {
+        "retention.ms": 60000,
+        "retention.bytes": 1000000
+      }
+    }
+  ],
+  
+  "remove_config": [
+    {
+      "name": "topic-1",
+      "configs": [
+        "retention.ms",
+        "retention.bytes"
+      ]
+    },
+    {
+      "name": "topic-2",
+      "configs": [
+        "retention.ms",
+        "retention.bytes"
+      ]
+    },
+    {
+      "name": "topic-3",
+      "configs": [
+        "retention.ms",
+        "retention.bytes"
+      ]
+    }
+  ],
+  
+  "delete": [
+    "topic-1",
+    "topic-2",
+    "topic-3"
+  ]
+}
+
